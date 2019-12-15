@@ -4,8 +4,9 @@
 RESTFUL service for generating fibonacci series.
 
 1. git clone https://github.com/Reddyprashant/Cerence-CodingChallenge.git
-2. on intelliJ terminal run "mvn clean install" command
-3. run "mvn spring-boot:run" Command to to Build, package and Run the application
+2. Import the project
+2. Run "mvn clean install" command on intelliJ Terminal
+3. Run "mvn spring-boot:run" Command to Build, package and Run the application on Tomcat Server
 
 4. Open Postman
 
