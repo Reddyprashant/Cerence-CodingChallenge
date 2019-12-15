@@ -10,13 +10,13 @@ RESTFUL service for generating fibonacci series.
 
 4. Open Postman
 
-   a. Generate the token using http://localhost:8080/v1/token
+   a. Generate the token using GET method and URI http://localhost:8080/v1/token
    
    b. To generate the fibonacci sequence 
    
        1. copy the generated token and select Authorization as "Bearer Token" in Postman and paste the token
        
-       2. http://localhost:8080/v1/fibonacci/number
+       2. GET method with URI http://localhost:8080/v1/fibonacci/number
 
 Testing the application:
 1. To test various scenarios for fibonacci sequence generation run Test class FibonacciGeneratorApplicationTests
