@@ -12,13 +12,16 @@ RESTFUL service for generating fibonacci series.
     4. Run "mvn spring-boot:run" Command to Run the application on Tomcat Server
 
     5. Open Postman
-
-       a. Generate the token using GET method and URI http://localhost:8080/v1/token and Token validity is for 2 minutes after 2 minutes we should generate the new token
+       a. Using GET method and URI http://localhost:8080/v1/fibonacci/ we can check whether our application is working or not just a "health check"
+       
+       b. Generate the token using GET method and URI http://localhost:8080/v1/token and Token validity is for 2 minutes after 2 minutes we should generate the new token
        
    
-       b. To generate the fibonacci sequence 
+       c. To generate the fibonacci sequence 
    
            1. copy the generated token and select Authorization as "Bearer Token" in Postman and paste the token
+           
+           2. Contstraints of number n, its value should be between 0 and 2000
        
            2. Using GET method and URI http://localhost:8080/v1/fibonacci/number (input number returns first n fibonacci numbers)
            
