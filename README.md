@@ -16,7 +16,7 @@ RESTFUL service for generating fibonacci series.
    
            1. copy the generated token and select Authorization as "Bearer Token" in Postman and paste the token
        
-           2. Using GET method with URI http://localhost:8080/v1/fibonacci/number   (inpout number returns first n fibonacci numbers)
+           2. Using GET method with URI http://localhost:8080/v1/fibonacci/number (input number returns first n fibonacci numbers)
 
 Testing the application:
 
