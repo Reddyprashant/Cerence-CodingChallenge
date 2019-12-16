@@ -2,7 +2,7 @@ package com.cerence.fibonacciGenerator.service;
 
 import com.cerence.fibonacciGenerator.exception.BadRequest;
 import com.cerence.fibonacciGenerator.exception.Unauthorized;
-import util.CommonConstants;
+import com.cerence.fibonacciGenerator.util.CommonConstants;
 import org.json.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.springframework.stereotype.Service;

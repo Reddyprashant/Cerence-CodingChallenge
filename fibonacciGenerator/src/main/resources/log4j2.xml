@@ -1,0 +1,55 @@
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+<!--<Configuration status="WARN" monitorInterval="60">-->
+<!--    <Properties>-->
+
+<!--        <Property name="filename">logs/</Property>-->
+<!--    </Properties>-->
+<!--<Filter type="ThresholdFilter" level="debug"/>-->
+<!--    <Appenders>-->
+
+<!--<Appender type="Console" name="STDOUT">-->
+<!--    <Layout type="PatternLayout" pattern="%m MDC%X%n"/>-->
+<!--    <Filters>-->
+<!--        <Filter type="MarkerFilter" marker="FLOW" onMatch="DENY" onMismatch="NEUTRAL"/>-->
+<!--        <Filter type="MarkerFilter" marker="EXCEPTION" onMatch="DENY" onMismatch="ACCEPT"/>-->
+<!--    </Filters>-->
+<!--</Appender>-->
+<!--<Appender type="Console" name="FLOW">-->
+<!--<Layout type="PatternLayout" pattern="%C{1}.%M %m %ex%n"/>&lt;!&ndash; class and line number &ndash;&gt;-->
+<!--<Filters>-->
+<!--    <Filter type="MarkerFilter" marker="FLOW" onMatch="ACCEPT" onMismatch="NEUTRAL"/>-->
+<!--    <Filter type="MarkerFilter" marker="EXCEPTION" onMatch="ACCEPT" onMismatch="DENY"/>-->
+<!--</Filters>-->
+<!--</Appender>-->
+<!--<Appender type="File" name="File" fileName="${filename}/app_log.log">-->
+<!--<Layout type="PatternLayout">-->
+<!--    <Pattern>%d %p %C{1.} [%t] %m%n</Pattern>-->
+<!--</Layout>-->
+<!--</Appender>-->
+
+
+<!--        <Console name="Console" target="STDOUT">-->
+<!--            <PatternLayout pattern="${LOG_PATTERN}"/>-->
+<!--        </Console>-->
+<!--        <File name="File-Appender" fileName="${path}/app_log.log">-->
+<!--            <PatternLayout>-->
+<!--                <pattern>-->
+<!--                    [%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n-->
+<!--                </pattern>-->
+<!--            </PatternLayout>-->
+<!--        </File>-->
+
+<!--    </Appenders>-->
+
+<!--    <Loggers>-->
+<!--        <Logger name="org.cerence.fibonacciGenerator" level="debug" additivity="false">-->
+<!--            <AppenderRef ref="ConsoleAppender" />-->
+<!--            <AppenderRef ref="File" />-->
+<!--        </Logger>-->
+
+<!--        <Root level="debug">-->
+<!--            <AppenderRef ref="ConsoleAppender"/>-->
+<!--            <AppenderRef ref="File"/>-->
+<!--        </Root>-->
+<!--    </Loggers>-->
+<!--</Configuration>-->

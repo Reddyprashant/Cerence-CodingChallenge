@@ -6,7 +6,7 @@ import com.cerence.fibonacciGenerator.service.IFibonacciGeneratorService;
 
 import org.junit.Test;
 import org.springframework.boot.test.context.SpringBootTest;
-import util.CommonConstants;
+import com.cerence.fibonacciGenerator.util.CommonConstants;
 
 import java.util.ArrayList;
 import java.util.Arrays;

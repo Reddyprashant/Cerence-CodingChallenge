@@ -3,7 +3,7 @@ package com.cerence.fibonacciGenerator.service;
 import com.cerence.fibonacciGenerator.exception.BadRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
-import util.CommonConstants;
+import com.cerence.fibonacciGenerator.util.CommonConstants;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,8 +17,8 @@ public class FibonacciGeneratorServiceImpl implements IFibonacciGeneratorService
         int firstNum = 0;
         int secondNum = 1;
         ArrayList<Integer> result = new ArrayList<Integer>();
-
-        if (number < 1) {
+        String strPattern = "^A-Za-z()[]+-*/%#";
+        if (number < 1 ) {
 
             throw new BadRequest(CommonConstants.BAD_REQUEST_MESSAGE);
         }

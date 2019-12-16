@@ -3,7 +3,7 @@ package com.cerence.fibonacciGenerator.exception;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
-import util.CommonConstants;
+import com.cerence.fibonacciGenerator.util.CommonConstants;
 
 @ResponseStatus(value = HttpStatus.UNAUTHORIZED)
 public class Unauthorized extends RuntimeException {

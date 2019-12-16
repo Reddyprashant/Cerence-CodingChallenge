@@ -3,7 +3,7 @@ package com.cerence.fibonacciGenerator;
 import com.cerence.fibonacciGenerator.service.TokenServiceImpl;
 import org.junit.Test;
 import org.springframework.boot.test.context.SpringBootTest;
-import util.CommonConstants;
+import com.cerence.fibonacciGenerator.util.CommonConstants;
 import static org.junit.Assert.*;
 
 @SpringBootTest
