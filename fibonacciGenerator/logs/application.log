@@ -3,3 +3,5 @@
 2019-12-16 02:13:06,468 INFO o.s.b.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
 2019-12-16 02:13:09,071 INFO o.s.b.StartupInfoLogger [restartedMain] Started FibonacciGeneratorApplication in 2.932 seconds (JVM running for 4.22)
 2019-12-16 02:13:10,242 ERROR c.c.f.c.FibonacciGeneratorController [http-nio-8080-exec-1] Token is expired
+2019-12-16 02:19:58,589 ERROR c.c.f.c.FibonacciGeneratorController [http-nio-8080-exec-6] Please Enter the Integer number greater than 0 to get Fibonacci sequence
+2019-12-16 02:20:06,412 ERROR c.c.f.c.FibonacciGeneratorController [http-nio-8080-exec-9] For input string: "a"

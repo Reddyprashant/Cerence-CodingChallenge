@@ -8,6 +8,6 @@ public class CommonConstants {
 	 public static String INVALID_FORMAT= "Invalid token format";
 	 public static String TOKEN_INCORRECT= "Incorrect token";
 	 public static String INVALID_TOKEN_GENERATION ="Input length must be multiple of 16 when decrypting with padded cipher";
-	 public static String NUMBER_EXCEPTION ="Please enter Integer in the url";
+	 public static String NUMBER_EXCEPTION ="Please enter Intger number as Input in the URI";
 
 }
