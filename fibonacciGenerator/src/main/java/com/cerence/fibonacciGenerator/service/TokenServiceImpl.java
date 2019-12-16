@@ -49,6 +49,8 @@ public class TokenServiceImpl implements ITokenService {
     /* validateToken takes input  token and  validates the token with different scenarios and sends appropriate response back to controller */
     @Override
     public boolean validateToken(String token) throws RuntimeException {
+
+        /* validates whether provided input token is empty or not and return result to controller */
         if (token == null || token.isEmpty()) {
             throw new BadRequest(CommonConstants.EMPTY_TOKEN);
         }
@@ -58,6 +60,7 @@ public class TokenServiceImpl implements ITokenService {
         }
         token1 = token.substring(7);
         System.out.println("token value is " + token1);
+        /* below condtion checks whether provided input token is valid or expired nad return result to controller */
         if (!authorize(token1)) {
             throw new Unauthorized(CommonConstants.TOKEN_EXPIRED);
         }

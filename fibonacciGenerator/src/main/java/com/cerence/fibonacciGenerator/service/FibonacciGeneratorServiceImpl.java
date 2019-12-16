@@ -19,13 +19,14 @@ public class FibonacciGeneratorServiceImpl implements IFibonacciGeneratorService
         int secondNum = 1;
         ArrayList<Integer> result = new ArrayList<Integer>();
 
+        /*checking whether input number is between 1 and 2000 */
         if (number < 1 || number > 2000) {
 
             throw new BadRequest(CommonConstants.BAD_REQUEST_MESSAGE);
         }
 
         result.add(firstNum);
-
+        /*checking whether input number is 1 and return result to controller, if number is not 1 then we generate first n fibonacci sequence by iterating till the input number */
         if (number == 1) {
             return result;
         } else {
