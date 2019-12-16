@@ -19,13 +19,14 @@ RESTFUL service for generating fibonacci series.
        2. GET method with URI http://localhost:8080/v1/fibonacci/number
 
 Testing the application:
-1. To test various scenarios for fibonacci sequence generation run Test class FibonacciGeneratorApplicationTests
 
-2. To test different scenarios for Token validation run Test class TokenServiceTest
+     1. To test various scenarios for fibonacci sequence generation run Test class FibonacciGeneratorApplicationTests
+
+     2. To test different scenarios for Token validation run Test class TokenServiceTest
     
 Authorization:
 
- RESTFUL service is secured by token generated using AES Encryption and Decryption algorithm.
+    RESTFUL service is secured by token generated using AES Encryption and Decryption algorithm.
 
 
 API Documentation using Swagger:
