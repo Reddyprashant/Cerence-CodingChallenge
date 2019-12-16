@@ -22,21 +22,20 @@ public class FibonacciGeneratorController {
 
 
     private final IFibonacciGeneratorService iFibonacciGeneratorService;
-
     private final ITokenService iTokenService;
 
     private static final Logger logger = LogManager.getLogger(FibonacciGeneratorController.class);
 
+    /* Constructor injection */
     @Autowired
     public FibonacciGeneratorController(final IFibonacciGeneratorService iFibonacciGeneratorService, final ITokenService iTokenService) {
-
         this.iFibonacciGeneratorService = iFibonacciGeneratorService;
         this.iTokenService = iTokenService;
     }
 
-
+    /* HealthCheck method is to verify whether out service is up and running */
     @GetMapping(path = "v1/fibonacci/")
-    public ResponseEntity<String> invalidURI(@RequestHeader HttpHeaders requestHeaders) {
+    public ResponseEntity<String> HealthCheck(@RequestHeader HttpHeaders requestHeaders) {
         return new ResponseEntity<>("Fibonacci series RESTFUL service is up and running", HttpStatus.OK);
     }
 
@@ -49,22 +48,17 @@ public class FibonacciGeneratorController {
         List<Integer> generatedSequence = new ArrayList<>();
         try {
             if ((iTokenService.validateToken(token))) {
-
-                HttpHeaders headers = new HttpHeaders();
-                headers.setContentType(MediaType.APPLICATION_JSON);
                 Integer num = Integer.parseInt(number);
                 generatedSequence = iFibonacciGeneratorService.generateFibonacciSequence(num);
             }
-
         } catch (NumberFormatException e) {
             logger.error(e.getMessage());
             return new ResponseEntity<>(CommonConstants.NUMBER_EXCEPTION, HttpStatus.BAD_REQUEST);
         } catch (RuntimeException ex) {
-            // TODO: handle exception
+
             if (ex.getMessage().equals(CommonConstants.EMPTY_TOKEN)) {
                 logger.debug(ex.getMessage());
                 return new ResponseEntity<>(CommonConstants.EMPTY_TOKEN, HttpStatus.BAD_REQUEST);
-
             } else if (ex.getMessage().equals(CommonConstants.INVALID_FORMAT)) {
                 logger.error(ex.getMessage());
                 return new ResponseEntity<>(CommonConstants.INVALID_FORMAT, HttpStatus.BAD_REQUEST);

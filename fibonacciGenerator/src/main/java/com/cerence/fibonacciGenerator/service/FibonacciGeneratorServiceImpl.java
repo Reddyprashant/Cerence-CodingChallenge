@@ -1,7 +1,6 @@
 package com.cerence.fibonacciGenerator.service;
 
 import com.cerence.fibonacciGenerator.exception.BadRequest;
-import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import com.cerence.fibonacciGenerator.util.CommonConstants;
 
@@ -12,9 +11,7 @@ import java.util.List;
 public class FibonacciGeneratorServiceImpl implements IFibonacciGeneratorService {
 
 
-
-
-/* This method takes input Integer number n and return first n fibonacci sequence */
+    /* This method takes input Integer number n and return first n fibonacci sequence */
     @Override
     public List<Integer> generateFibonacciSequence(int number) throws BadRequest {
 
@@ -22,11 +19,13 @@ public class FibonacciGeneratorServiceImpl implements IFibonacciGeneratorService
         int secondNum = 1;
         ArrayList<Integer> result = new ArrayList<Integer>();
 
-        if (number < 1) {
+        if (number < 1 || number > 2000) {
 
             throw new BadRequest(CommonConstants.BAD_REQUEST_MESSAGE);
         }
+
         result.add(firstNum);
+
         if (number == 1) {
             return result;
         } else {
@@ -36,16 +35,8 @@ public class FibonacciGeneratorServiceImpl implements IFibonacciGeneratorService
 
             }
         }
-
-
         return result;
     }
 
-    public HttpStatus getStatus(Exception ex) {
-        if (ex instanceof BadRequest) {
-            BadRequest runex = (BadRequest) ex;
-            return runex.getStatus();
-        } else
-            return null;
-    }
+
 }
