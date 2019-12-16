@@ -24,6 +24,7 @@ Testing the application:
 2. To test different scenarios for Token validation run Test class TokenServiceTest
     
 Authorization:
+
  RESTFUL service is secured by token generated using AES Encryption and Decryption algorithm.
 
 
