@@ -23,7 +23,7 @@ RESTFUL service for generating fibonacci series.
            
            2. Contstraints of number n, its value should be between 0 and 2000
        
-           2. Using GET method and URI http://localhost:8080/v1/fibonacci/number (input number returns first n fibonacci numbers)
+           3. Using GET method and URI http://localhost:8080/v1/fibonacci/number (input number returns first n fibonacci numbers)
            
     6. Logging has been implemented using Log4j2, we can check the errorlogs in "application.log" file inside the folder named "logs" in our  web service
      
