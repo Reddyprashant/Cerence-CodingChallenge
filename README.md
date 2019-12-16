@@ -3,6 +3,17 @@
 
 RESTFUL service for generating fibonacci series.
 
+
+Technolgoies used for development:
+
+    1. SpringBoot for RESTFUL webservice development
+    
+    2. Swagger for API documentation
+    
+    3. Log4j2 for Loggings
+    
+    4. Postman to communicate to the web service(To send request and recieve response)
+    
 To run the web service:
 
     1. git clone https://github.com/Reddyprashant/Cerence-CodingChallenge.git
