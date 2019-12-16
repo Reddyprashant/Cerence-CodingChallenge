@@ -3,7 +3,7 @@
 
 RESTFUL service for generating fibonacci series.
 
-How to run the web service?
+To run the web service:
 
     1. git clone https://github.com/Reddyprashant/Cerence-CodingChallenge.git
     
