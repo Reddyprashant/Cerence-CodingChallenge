@@ -33,7 +33,7 @@ public class FibonacciGeneratorController {
         this.iTokenService = iTokenService;
     }
 
-
+/* This method takes input as integer number n , validates the token and returns first n fibonacci numbers from generateFibonacciSequence method implemented in iFibonacciGeneratorService service class */
     @GetMapping(path = "v1/fibonacci/{number}")
     public ResponseEntity<String> getFibonnaciNumbers(@PathVariable(name = "number", required = true) String number, @RequestHeader HttpHeaders requestHeaders) {
 
@@ -63,7 +63,7 @@ public class FibonacciGeneratorController {
                 logger.error(ex.getMessage());
                 return new ResponseEntity<>(CommonConstants.INVALID_FORMAT, HttpStatus.BAD_REQUEST);
             } else if (ex.getMessage().equals(CommonConstants.TOKEN_EXPIRED)) {
-                logger.error(ex.getMessage());
+                logger.error(ex);
                 return new ResponseEntity<>(CommonConstants.TOKEN_EXPIRED, HttpStatus.UNAUTHORIZED);
             } else if (ex.getMessage().equals(CommonConstants.BAD_REQUEST_MESSAGE)) {
                 logger.error(ex.getMessage());

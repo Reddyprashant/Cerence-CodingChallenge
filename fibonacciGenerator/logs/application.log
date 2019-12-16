@@ -5,3 +5,22 @@
 2019-12-16 02:13:10,242 ERROR c.c.f.c.FibonacciGeneratorController [http-nio-8080-exec-1] Token is expired
 2019-12-16 02:19:58,589 ERROR c.c.f.c.FibonacciGeneratorController [http-nio-8080-exec-6] Please Enter the Integer number greater than 0 to get Fibonacci sequence
 2019-12-16 02:20:06,412 ERROR c.c.f.c.FibonacciGeneratorController [http-nio-8080-exec-9] For input string: "a"
+2019-12-16 02:24:17,686 INFO o.s.b.StartupInfoLogger [restartedMain] Starting FibonacciGeneratorApplication on prashants-MacBook-Pro.local with PID 92096 (/Users/prashantreddy/Documents/Cerence-CodingChallenge/Cerence-CodingChallenge/fibonacciGenerator/target/classes started by prashantreddy in /Users/prashantreddy/Documents/Cerence-CodingChallenge/Cerence-CodingChallenge/fibonacciGenerator)
+2019-12-16 02:24:17,701 DEBUG o.s.b.StartupInfoLogger [restartedMain] Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+2019-12-16 02:24:17,702 INFO o.s.b.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-12-16 02:24:20,579 INFO o.s.b.StartupInfoLogger [restartedMain] Started FibonacciGeneratorApplication in 3.33 seconds (JVM running for 5.166)
+2019-12-16 02:24:32,283 ERROR c.c.f.c.FibonacciGeneratorController [http-nio-8080-exec-2] Token is expired
+2019-12-16 02:25:40,701 INFO o.s.b.StartupInfoLogger [restartedMain] Starting FibonacciGeneratorApplication on prashants-MacBook-Pro.local with PID 92174 (/Users/prashantreddy/Documents/Cerence-CodingChallenge/Cerence-CodingChallenge/fibonacciGenerator/target/classes started by prashantreddy in /Users/prashantreddy/Documents/Cerence-CodingChallenge/Cerence-CodingChallenge/fibonacciGenerator)
+2019-12-16 02:25:40,707 DEBUG o.s.b.StartupInfoLogger [restartedMain] Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+2019-12-16 02:25:40,708 INFO o.s.b.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-12-16 02:25:43,521 INFO o.s.b.StartupInfoLogger [restartedMain] Started FibonacciGeneratorApplication in 3.087 seconds (JVM running for 4.433)
+2019-12-16 02:25:45,449 ERROR c.c.f.c.FibonacciGeneratorController [http-nio-8080-exec-1] com.cerence.fibonacciGenerator.exception.Unauthorized: Token is expired
+2019-12-16 02:27:01,192 INFO o.s.b.StartupInfoLogger [restartedMain] Starting FibonacciGeneratorApplication on prashants-MacBook-Pro.local with PID 92192 (/Users/prashantreddy/Documents/Cerence-CodingChallenge/Cerence-CodingChallenge/fibonacciGenerator/target/classes started by prashantreddy in /Users/prashantreddy/Documents/Cerence-CodingChallenge/Cerence-CodingChallenge/fibonacciGenerator)
+2019-12-16 02:27:01,199 DEBUG o.s.b.StartupInfoLogger [restartedMain] Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+2019-12-16 02:27:01,200 INFO o.s.b.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-12-16 02:27:03,922 INFO o.s.b.StartupInfoLogger [restartedMain] Started FibonacciGeneratorApplication in 3.014 seconds (JVM running for 4.517)
+2019-12-16 02:27:06,405 ERROR c.c.f.c.FibonacciGeneratorController [http-nio-8080-exec-1] Token is expired
+2019-12-16 02:27:35,077 INFO o.s.b.StartupInfoLogger [restartedMain] Starting FibonacciGeneratorApplication on prashants-MacBook-Pro.local with PID 92203 (/Users/prashantreddy/Documents/Cerence-CodingChallenge/Cerence-CodingChallenge/fibonacciGenerator/target/classes started by prashantreddy in /Users/prashantreddy/Documents/Cerence-CodingChallenge/Cerence-CodingChallenge/fibonacciGenerator)
+2019-12-16 02:27:35,083 DEBUG o.s.b.StartupInfoLogger [restartedMain] Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+2019-12-16 02:27:35,084 INFO o.s.b.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-12-16 02:27:37,883 INFO o.s.b.StartupInfoLogger [restartedMain] Started FibonacciGeneratorApplication in 3.074 seconds (JVM running for 4.322)

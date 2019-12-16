@@ -6,6 +6,7 @@ import com.cerence.fibonacciGenerator.util.CommonConstants;
 import org.json.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.springframework.stereotype.Service;
+
 import javax.crypto.Cipher;
 import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
@@ -19,6 +20,7 @@ public class TokenServiceImpl implements ITokenService {
     private static String finalKey = "abcdefqwertyuiop";
     String finalToken;
 
+    /* generateToken method generates the authentication token using AES encryption algorithm */
     @Override
     public String generateToken() {
 
@@ -31,12 +33,8 @@ public class TokenServiceImpl implements ITokenService {
             SimpleDateFormat df = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
             object.put("ttl", df.format(date));
 
-
             //Partial token created
             String token = object.toString();
-            System.out.println("Token values is " + token);
-            System.out.println("TTL is : " + object.get("ttl"));
-
 
             IvParameterSpec iv = new IvParameterSpec(initVector.getBytes("UTF-8"));
             SecretKeySpec skeySpec = new SecretKeySpec(finalKey.getBytes("UTF-8"), "AES");
@@ -55,6 +53,7 @@ public class TokenServiceImpl implements ITokenService {
         return finalToken;
     }
 
+    /* validateToken takes input  token and  validates the token with different scenarios*/
     @Override
     public boolean validateToken(String token) throws RuntimeException {
         if (token == null || token.isEmpty()) {
@@ -73,11 +72,11 @@ public class TokenServiceImpl implements ITokenService {
         return true;
     }
 
+    /* authorize takes input token and authorizes the token using AES Decryption algorithm */
     @Override
     public boolean authorize(String token) {
         JSONParser parser = new JSONParser();
         try {
-            System.out.println("token coming in authorize" + token);
             String initVector = "RandomInitVector";
             IvParameterSpec iv = new IvParameterSpec(initVector.getBytes("UTF-8"));
             SecretKeySpec skeySpec = new SecretKeySpec(finalKey.getBytes("UTF-8"), "AES");
@@ -86,8 +85,6 @@ public class TokenServiceImpl implements ITokenService {
             cipher.init(Cipher.DECRYPT_MODE, skeySpec, iv);
             byte[] original = cipher.doFinal(org.apache.tomcat.util.codec.binary.Base64.decodeBase64(token));
             String entityDecoded = new String(original);
-
-            System.out.println("***Entity Decoded is " + entityDecoded);
 
             org.json.simple.JSONObject jsonobj = (org.json.simple.JSONObject) parser.parse(entityDecoded);
             Object arrayOfTests = jsonobj.get("ttl");
@@ -98,10 +95,6 @@ public class TokenServiceImpl implements ITokenService {
 
             Date end = formatter.parse(getDate);
             Date start = formatter.parse(formatter.format(date));
-
-            System.out.println(start.toString());
-            System.out.println(end.toString());
-
             if (!start.before(end)) {
 
                 return false;
