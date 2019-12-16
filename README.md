@@ -5,7 +5,7 @@ RESTFUL service for generating fibonacci series.
 
     1. git clone https://github.com/Reddyprashant/Cerence-CodingChallenge.git
     2. UnZip and Import the project
-    3. Run "mvn clean install" command on intelliJ Terminal to build and package the application
+    3. Run "mvn clean install" command in IDE to build and package the application
     4. Run "mvn spring-boot:run" Command to Run the application on Tomcat Server
 
     4. Open Postman
@@ -16,13 +16,13 @@ RESTFUL service for generating fibonacci series.
    
            1. copy the generated token and select Authorization as "Bearer Token" in Postman and paste the token
        
-           2. GET method with URI http://localhost:8080/v1/fibonacci/number
+           2. Using GET method with URI http://localhost:8080/v1/fibonacci/number   (inpout number returns first n fibonacci numbers)
 
 Testing the application:
 
-     1. To test various scenarios for fibonacci sequence generation run Test class FibonacciGeneratorApplicationTests
+     1. To Test various scenarios for fibonacci sequence generation run FibonacciGeneratorApplicationTests Test Class in IDE
 
-     2. To test different scenarios for Token validation run Test class TokenServiceTest
+     2. To Test different scenarios for Token validation run TokenServiceTest Test Class in IDE
     
 Authorization:
 
@@ -33,7 +33,7 @@ API Documentation using Swagger:
 
     1. http://localhost:8080/swagger-ui.html to check the API documentation.
     
-    2. we can check the methods implemented in our web service. 
+    2. we can verify the methods implemented in our web service. 
 
 
 
