@@ -16,8 +16,9 @@ RESTFUL service for generating fibonacci series.
    
            1. copy the generated token and select Authorization as "Bearer Token" in Postman and paste the token
        
-           2. Using GET method with URI http://localhost:8080/v1/fibonacci/number (input number returns first n fibonacci numbers)
-
+           2. Using GET method and URI http://localhost:8080/v1/fibonacci/number (input number returns first n fibonacci numbers)
+     5. Logging has been implemented using Log4j2, we can check the errorlogs in "application.log" file in folder named "logs" in our  web service
+     
 Testing the application:
 
      1. To Test various scenarios for fibonacci sequence generation run FibonacciGeneratorApplicationTests Test Class in IDE
@@ -34,7 +35,5 @@ API Documentation using Swagger:
     1. http://localhost:8080/swagger-ui.html to check the API documentation.
     
     2. we can verify the methods implemented in our web service. 
-
-
 
 
