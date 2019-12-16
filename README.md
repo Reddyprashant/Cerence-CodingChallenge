@@ -14,6 +14,8 @@ Technolgoies used for development:
     
     4. Postman to communicate to the web service(To send request and recieve response)
     
+    5. Apache Tomcat server
+    
 To run the web service:
 
     1. git clone https://github.com/Reddyprashant/Cerence-CodingChallenge.git
