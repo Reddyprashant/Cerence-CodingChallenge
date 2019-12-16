@@ -20,11 +20,13 @@ To run the web service:
     
     2. UnZip and Import the project
     
-    3. Run "mvn clean install" command in IDE to build and package the application
+    3. Install Apache Tomcat server and configure the Tomcat server path in IDE
     
-    4. Run "mvn spring-boot:run" Command to Run the application on Tomcat Server
+    4. Run "mvn clean install" command in IDE to build and package the application
+    
+    5. Run "mvn spring-boot:run" Command to Run the application on Tomcat Server
 
-    5. Open Postman
+    6. Open Postman
        a. Using GET method and URI http://localhost:8080/v1/fibonacci/ we can check whether our application is working or not just a "health check"
        
        b. Generate the token using GET method and URI http://localhost:8080/v1/token and Token validity is for 2 minutes after 2 minutes we should generate the new token
@@ -38,7 +40,7 @@ To run the web service:
        
            3. Using GET method and URI http://localhost:8080/v1/fibonacci/number (input number returns first n fibonacci numbers)
            
-    6. Logging has been implemented using Log4j2, we can check the errorlogs in "application.log" file inside the folder named "logs" in our  web service
+    7. Logging has been implemented using Log4j2, we can check the errorlogs in "application.log" file inside the folder named "logs" in our  web service
      
 Testing the application:
 
