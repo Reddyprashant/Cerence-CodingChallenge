@@ -13,7 +13,8 @@ RESTFUL service for generating fibonacci series.
 
     5. Open Postman
 
-       a. Generate the token using GET method and URI http://localhost:8080/v1/token
+       a. Generate the token using GET method and URI http://localhost:8080/v1/token and Token validity is for 2 minutes after 2 minutes we should generate the new token
+       
    
        b. To generate the fibonacci sequence 
    
