@@ -12,6 +12,8 @@ import java.util.List;
 public class FibonacciGeneratorServiceImpl implements IFibonacciGeneratorService {
 
 
+
+
 /* This method takes input Integer number n and return first n fibonacci sequence */
     @Override
     public List<Integer> generateFibonacciSequence(int number) throws BadRequest {

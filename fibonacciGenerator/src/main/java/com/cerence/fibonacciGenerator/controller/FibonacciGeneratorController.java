@@ -12,6 +12,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -33,7 +34,14 @@ public class FibonacciGeneratorController {
         this.iTokenService = iTokenService;
     }
 
-/* This method takes input as integer number n , validates the token and returns first n fibonacci numbers from generateFibonacciSequence method implemented in iFibonacciGeneratorService service class */
+
+    @GetMapping(path = "v1/fibonacci/")
+    public ResponseEntity<String> invalidURI(@RequestHeader HttpHeaders requestHeaders) {
+        return new ResponseEntity<>("Fibonacci series RESTFUL service is up and running", HttpStatus.OK);
+    }
+
+
+    /* This method takes input as integer number n , validates the token and returns first n fibonacci numbers from generateFibonacciSequence method implemented in iFibonacciGeneratorService service class */
     @GetMapping(path = "v1/fibonacci/{number}")
     public ResponseEntity<String> getFibonnaciNumbers(@PathVariable(name = "number", required = true) String number, @RequestHeader HttpHeaders requestHeaders) {
 
@@ -48,12 +56,10 @@ public class FibonacciGeneratorController {
                 generatedSequence = iFibonacciGeneratorService.generateFibonacciSequence(num);
             }
 
-        }
-        catch(NumberFormatException e){
+        } catch (NumberFormatException e) {
             logger.error(e.getMessage());
             return new ResponseEntity<>(CommonConstants.NUMBER_EXCEPTION, HttpStatus.BAD_REQUEST);
-        }
-    catch (RuntimeException ex) {
+        } catch (RuntimeException ex) {
             // TODO: handle exception
             if (ex.getMessage().equals(CommonConstants.EMPTY_TOKEN)) {
                 logger.debug(ex.getMessage());
@@ -68,8 +74,7 @@ public class FibonacciGeneratorController {
             } else if (ex.getMessage().equals(CommonConstants.BAD_REQUEST_MESSAGE)) {
                 logger.error(ex.getMessage());
                 return new ResponseEntity<>(CommonConstants.BAD_REQUEST_MESSAGE, HttpStatus.BAD_REQUEST);
-            }
-            else{
+            } else {
                 logger.error(ex.getMessage());
                 return new ResponseEntity<>(CommonConstants.BAD_REQUEST_MESSAGE, HttpStatus.BAD_REQUEST);
             }
